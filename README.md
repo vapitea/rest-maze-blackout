@@ -11,7 +11,7 @@ cd rest-maze-blackout
 java -jar target/rest-maze-blackout-0.0.1-SNAPSHOT.jar
 ```
 
-After running the jar file, open a browser and visit: [https://localhost:8080/mazeSolution](http://localhost:8080/mazeSolution) to start solving a new random maze.
+After running the jar file, open a browser and visit: [http://localhost:8080/mazeSolution](http://localhost:8080/mazeSolution) to start solving a new random maze.
 
 The page will load for 1-5 minutes, until the solution to the maze is found. In the meantime you can check the progress on the console screen, where every step is printed, a fontsize of 10 is recommended.
 
