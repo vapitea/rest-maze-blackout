@@ -1,11 +1,13 @@
 package com.example.restmazealerant.controller;
 
 import com.example.restmazealerant.service.MazeSolver;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
+@Scope(value = "request")
 public class MazeController {
     private final MazeSolver mazeSolver;
 
