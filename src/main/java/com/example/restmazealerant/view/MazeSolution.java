@@ -18,6 +18,18 @@ public class MazeSolution {
         addPathToViews(path);
     }
 
+    private static CellView from(Cell cell) {
+        CellView cellView = new CellView();
+        cellView.setHasNorthernBorder(cell.getRouteToNeighbours()[0] == Cell.RouteType.BLOCKED);
+        cellView.setHasEasternBorder(cell.getRouteToNeighbours()[1] == Cell.RouteType.BLOCKED);
+        cellView.setHasSouthernBorder(cell.getRouteToNeighbours()[2] == Cell.RouteType.BLOCKED);
+        cellView.setHasWesternBorder(cell.getRouteToNeighbours()[3] == Cell.RouteType.BLOCKED);
+        cellView.setVisited(cell.isVisited() || cell.isPreviouslyVisited());
+        cellView.setAtEnd(cell.isAtEnd());
+        cellView.setAtBeginning(cell.getX() == 0 && cell.getY() == 0 && (cell.isVisited() || cell.isPreviouslyVisited()));
+        return cellView;
+    }
+
     private void addPathToViews(Deque<Cell> path) {
         path.forEach(cell -> cells[cell.getX()][cell.getY()].setPartOfThePath(true));
     }
@@ -30,18 +42,6 @@ public class MazeSolution {
                 cells[i][j] = from(finalMazeState[i][j]);
             }
         }
-    }
-
-    private static CellView from(Cell cell) {
-        CellView cellView = new CellView();
-        cellView.setHasNorthernBorder(cell.getRouteToNeighbours()[0] == Cell.RouteType.BLOCKED);
-        cellView.setHasEasternBorder(cell.getRouteToNeighbours()[1] == Cell.RouteType.BLOCKED);
-        cellView.setHasSouthernBorder(cell.getRouteToNeighbours()[2] == Cell.RouteType.BLOCKED);
-        cellView.setHasWesternBorder(cell.getRouteToNeighbours()[3] == Cell.RouteType.BLOCKED);
-        cellView.setVisited(cell.isVisited() || cell.isPreviouslyVisited());
-        cellView.setAtEnd(cell.isAtEnd());
-        cellView.setAtBeginning(cell.getX() == 0 && cell.getY() == 0);
-        return cellView;
     }
 
 }
