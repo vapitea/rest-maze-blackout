@@ -9,6 +9,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 @Service
+@Scope(value = "request")
 public class MazeSolver {
 
     private static final int WIDTH = 100;

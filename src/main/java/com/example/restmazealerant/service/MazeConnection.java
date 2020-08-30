@@ -3,11 +3,13 @@ package com.example.restmazealerant.service;
 import com.example.restmazealerant.model.Cell;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.util.UriComponentsBuilder;
 
 @Service
+@Scope(value = "request")
 public class MazeConnection {
     private static final String BASE_URL = "https://www.epdeveloperchallenge.com";
     private final WebClient webClient = WebClient.create();
