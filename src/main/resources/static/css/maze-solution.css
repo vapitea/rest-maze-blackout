@@ -1,0 +1,42 @@
+table {
+    border-collapse: collapse;
+}
+
+td {
+    border: 2px transparent solid;
+    font-family: monospace;
+    background-color: black;
+    padding: 0px;
+    margin: 0px;
+    width: 10px;
+    height: 10px;
+}
+
+
+.visited {
+    background-color: white;
+}
+
+.part-of-the-path {
+    background-color: #85CA7A;
+}
+
+.at-end {
+    background-color: #01a4b4;
+}
+
+.blocked-from-north {
+    border-top-color: #EE963C;
+}
+
+.blocked-from-east {
+    border-right-color: #EE963C;
+}
+
+.blocked-from-south {
+    border-bottom-color: #EE963C;
+}
+
+.blocked-from-west {
+    border-left-color: #EE963C;
+}
