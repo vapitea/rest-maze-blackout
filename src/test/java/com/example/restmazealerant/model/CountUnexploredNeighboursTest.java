@@ -15,10 +15,10 @@ class CountUnexploredNeighboursTest {
         cell.setRouteToNeighbours(new Cell.RouteType[]{Cell.RouteType.VISITED, Cell.RouteType.BLOCKED, null, null});
 
         //Act
-        int unexpolerNeighbours = cell.countUnexploredNeighbours();
+        int unexploredNeighbours = cell.countUnexploredNeighbours();
 
         //Assert
-        assertEquals(0, unexpolerNeighbours);
+        assertEquals(0, unexploredNeighbours);
     }
 
     @Test
@@ -28,10 +28,10 @@ class CountUnexploredNeighboursTest {
         cell.setRouteToNeighbours(new Cell.RouteType[]{Cell.RouteType.VISITED, Cell.RouteType.UNEXPLORED, null, Cell.RouteType.UNEXPLORED});
 
         //Act
-        int unexpolerNeighbours = cell.countUnexploredNeighbours();
+        int unexploredNeighbours = cell.countUnexploredNeighbours();
 
         //Assert
-        assertEquals(2, unexpolerNeighbours);
+        assertEquals(2, unexploredNeighbours);
     }
 
 
