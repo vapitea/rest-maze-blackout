@@ -1,5 +1,8 @@
 # Maze solver application
 
+## Description of the problem
+[https://www.epdeveloperchallenge.com/](https://www.epdeveloperchallenge.com/)
+
 ## Running the app
 
 Running the app requires JRE 11+.
